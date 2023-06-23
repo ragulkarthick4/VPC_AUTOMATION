@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set AWS region and VPC CIDR
+# Set AWS region and VPC CIDR 
 AWS_REGION="us-east-1"
 VPC_CIDR="10.0.0.0/16"
 
