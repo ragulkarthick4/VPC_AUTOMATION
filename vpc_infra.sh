@@ -17,7 +17,7 @@ echo "Internet Gateway created with ID: $IGW_ID"
 
 # Attach the Internet Gateway to the VPC
 aws ec2 attach-internet-gateway --vpc-id $VPC_ID --internet-gateway-id $IGW_ID
-
+ 
 # Create a public subnet
 PUBLIC_SUBNET_ID=$(aws ec2 create-subnet --vpc-id $VPC_ID --cidr-block "10.0.0.0/24" --availability-zone $AWS_REGIONa --output text --query 'Subnet.SubnetId')
 echo "Public subnet created with ID: $PUBLIC_SUBNET_ID"
