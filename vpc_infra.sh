@@ -7,7 +7,7 @@ VPC_CIDR="10.0.0.0/16"
 # Create VPC
 VPC_ID=$(aws ec2 create-vpc --cidr-block $VPC_CIDR --region $AWS_REGION --output text --query 'Vpc.VpcId')
 echo "VPC created with ID: $VPC_ID"
-
+ 
 # Enable DNS hostnames for the VPC
 aws ec2 modify-vpc-attribute --vpc-id $VPC_ID --enable-dns-hostnames
 
